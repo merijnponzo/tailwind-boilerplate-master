@@ -1,0 +1,61 @@
+Arguments: 
+  /usr/local/Cellar/node@14/14.15.3/bin/node /usr/local/Cellar/yarn/1.22.10/libexec/bin/yarn.js
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/ponzo/.composer/vendor/bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.15.3
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Applications/MAMP/htdocs/tailwind-boilerplate-master/package.json: Unexpected token } in JSON at position 789
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:310:30)
+      at /usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "tailwindcss-filter-test",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+      "build": "postcss src/css/tailwind.css -o dist/assets/css/main.css",
+      "watch": "postcss src/css/tailwind.css -o dist/assets/css/main.css --watch",
+      "serve": "cross-env NODE_ENV=development concurrently \"postcss src/css/tailwind.css -o dist/assets/css/main.css --watch\"  \"live-server ./dist\"",
+      "dev": "cross-env NODE_ENV=development postcss src/css/tailwind.css -o dist/assets/css/main.css",
+      "prod": "cross-env NODE_ENV=production postcss src/css/tailwind.css -o dist/assets/css/main.css",
+      "start": "npm run serve"
+    },
+    "keywords": [
+      "tailwindcss",
+      "tailwind",
+      "tailwindUI"
+    ],
+    "license": "MIT",
+    "dependencies": {
+      "autoprefixer": "^10.1.0",
+    },
+    "devDependencies": {
+      "concurrently": "^6.0.2",
+      "cross-env": "^7.0.3",
+      "cssnano": "^5.0.2",
+      "live-server": "^1.2.1",
+      "postcss": "^8.2.1",
+      "postcss-cli": "^8.3.1",
+      "postcss-import": "^14.0.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
